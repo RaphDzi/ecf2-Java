@@ -1,0 +1,365 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.1.1">
+  <diagram name="Page-1" id="srCphx1TlbQ1Isu736NX">
+    <mxGraphModel dx="4232" dy="3989" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="diUI_rL3HwAar2bAVaX--1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;Category&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ valueOf(String): Category&lt;br/&gt;+ values(): Category[]&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="-13" width="204" height="109" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;EnvironementApplication&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ main(String[]): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1856" y="1878" width="244" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;NotFoundException&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="2387" y="1767" width="202" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--4" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Observation&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;+ entityToDto(): ObservationDtoResponse&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; comment: String&lt;br&gt; location: String&lt;br&gt; latitude: Double&lt;br&gt; specie: Specie&lt;br&gt; observerName: String&lt;br&gt; observationDate: LocalDate&lt;br&gt; travellogs: List&amp;lt;Travellog&amp;gt;&lt;br&gt; id: long&lt;br&gt; longitude: Double&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="979" y="866" width="296" height="284" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ObservationController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getObservationBySpecie(long): ResponseEntity&amp;lt;List&amp;lt;ObservationDtoResponse&amp;gt;&amp;gt;&lt;br/&gt;+ getById(long): ResponseEntity&amp;lt;ObservationDtoResponse&amp;gt;&lt;br/&gt;+ getObservationByLocation(String): ResponseEntity&amp;lt;List&amp;lt;ObservationDtoResponse&amp;gt;&amp;gt;&lt;br/&gt;+ create(ObservationDtoReceive): ResponseEntity&amp;lt;ObservationDtoResponse&amp;gt;&lt;br/&gt;+ getAll(int, int): ResponseEntity&amp;lt;List&amp;lt;ObservationDtoResponse&amp;gt;&amp;gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="2000" width="581" height="159" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ObservationDtoReceive&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ toString(): String&lt;br&gt;+ dtoToEntity(SpecieRepository): Observation&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; comment: String&lt;br&gt; location: String&lt;br&gt; latitude: Double&lt;br&gt; observerName: String&lt;br&gt; specieId: long&lt;br&gt; travellogs: List&amp;lt;TravellogDtoReceive&amp;gt;&lt;br&gt; observationDateStr: String&lt;br&gt; longitude: Double&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="1083" width="320" height="297" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ObservationDtoResponse&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;+ toString(): String&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; comment: String&lt;br&gt; location: String&lt;br&gt; latitude: Double&lt;br&gt; specie: SpecieDtoResponse&lt;br&gt; observerName: String&lt;br&gt; observationDate: LocalDate&lt;br&gt; travellogs: List&amp;lt;TravellogDtoResponse&amp;gt;&lt;br&gt; id: long&lt;br&gt; longitude: Double&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1358" y="916" width="306" height="377" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ObservationRepository&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="707" y="1654" width="536" height="139" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--9" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;ObservationRepositoryPaginate&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1292" y="1562" width="293" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--10" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ObservationService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ get(long): ObservationDtoResponse&lt;br/&gt;+ getBySpecie(long): List&amp;lt;ObservationDtoResponse&amp;gt;&lt;br/&gt;+ create(ObservationDtoReceive): ObservationDtoResponse&lt;br/&gt;- convertList(List&amp;lt;Observation&amp;gt;): List&amp;lt;ObservationDtoResponse&amp;gt;&lt;br/&gt;+ get(int, int): List&amp;lt;ObservationDtoResponse&amp;gt;&lt;br/&gt;+ getByLocation(String): List&amp;lt;ObservationDtoResponse&amp;gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1309" y="1757" width="450" height="183" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--11" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Specie&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ toString(): String&lt;br&gt;+ entityToDto(): SpecieDtoResponse&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; category: Category&lt;br&gt; commonName: String&lt;br&gt; scientificName: String&lt;br&gt; id: long&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1286" y="525" width="261" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--12" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;SpecieController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+&lt;br&gt;+&lt;br&gt;+&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1834" y="1707" width="493" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--13" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;SpecieDtoReceive&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+&amp;nbsp;&lt;br&gt;+&amp;nbsp;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;-&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;-&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;-&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="946" y="1328" width="258" height="172" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--14" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;SpecieDtoResponse&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ toString(): String&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; commonName: String&lt;br&gt; category: String&lt;br&gt; scientificName: String&lt;br&gt; id: long&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="184" width="272" height="186" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--15" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;SpecieRepository&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1645" y="1619" width="185" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--16" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;SpecieRepositoryPaginate&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1775" y="1514" width="251" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--17" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;SpecieService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ get(int, int): List&amp;lt;SpecieDtoResponse&amp;gt;&lt;br/&gt;+ create(SpecieDtoReceive): SpecieDtoResponse&lt;br/&gt;+ get(long): SpecieDtoResponse&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="2180" y="1514" width="336" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--18" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;TravelMode&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ values(): TravelMode[]&lt;br/&gt;+ valueOf(String): TravelMode&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="882" y="-8" width="219" height="109" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--19" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Travellog&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+&amp;nbsp;&lt;br&gt;+&amp;nbsp;&lt;br&gt;+&amp;nbsp;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;-&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;-&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;-&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;-&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;-&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1162" y="135" width="277" height="245" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--20" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TravellogController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getStatFromObseration(long): ResponseEntity&amp;lt;TravellogDtoStat&amp;gt;&lt;br/&gt;+ getTravelStatForUserOnLAstMonth(String): ResponseEntity&amp;lt;Map&amp;lt;String, TravellogDtoStat&amp;gt;&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; allTravellogs: ResponseEntity&amp;lt;List&amp;lt;TravellogDtoResponse&amp;gt;&amp;gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="16" y="1764" width="630" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--21" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TravellogDtoReceive&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ toString(): String&lt;br&gt;+ dtoToEntity(): Travellog&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; mode: String&lt;br&gt; distanceKm: double&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="855" y="524" width="274" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--22" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TravellogDtoResponse&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ toString(): String&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; mode: String&lt;br&gt; distanceKm: double&lt;br&gt; id: long&lt;br&gt; estimatedCo2Kg: double&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1608" y="550" width="288" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--23" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TravellogDtoStat&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+&lt;br&gt;+&lt;br&gt;+&lt;br&gt;+&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;-&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;-&lt;/p&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;-&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1117" width="267" height="233" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--24" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;TravellogRepository&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ findTravellogByObservation_Id(long): List&amp;lt;Travellog&amp;gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="392" y="1522" width="379" height="79" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--25" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TravellogsService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getStat(long): TravellogDtoStat&lt;br/&gt;+ get(int): List&amp;lt;TravellogDtoResponse&amp;gt;&lt;br/&gt;+ getStatForUserLastMonth(String): Map&amp;lt;String, TravellogDtoStat&amp;gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-147" y="1559" width="457" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--26" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=1.000;exitY=0.500;exitDx=0;exitDy=0;entryX=0.211;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--4" target="diUI_rL3HwAar2bAVaX--11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1341" y="1067" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--27" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--26">
+          <mxGeometry x="1326" y="893" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--28" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--26">
+          <mxGeometry x="1326" y="1016" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--29" value="specie" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--26">
+          <mxGeometry x="1341" y="829" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--30" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.643;exitY=0.000;exitDx=0;exitDy=0;entryX=0.027;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--4" target="diUI_rL3HwAar2bAVaX--19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--31" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--30">
+          <mxGeometry x="1158" y="841" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--32" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--30">
+          <mxGeometry x="1160" y="469" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--33" value="travellogs" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--30">
+          <mxGeometry x="1169" y="469" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--34" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.987;exitY=0.000;exitDx=0;exitDy=0;entryX=0.499;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--5" target="diUI_rL3HwAar2bAVaX--10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--35" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--34">
+          <mxGeometry x="1518" y="1945" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--36" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--34">
+          <mxGeometry x="1523" y="1971" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--37" value="observationService" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--34">
+          <mxGeometry x="1534" y="1945" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--38" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.977;exitY=0.000;exitDx=0;exitDy=0;entryX=0.063;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--6" target="diUI_rL3HwAar2bAVaX--21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--39" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--38">
+          <mxGeometry x="862" y="1053" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--40" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--38">
+          <mxGeometry x="864" y="767" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--41" value="travellogs" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--38">
+          <mxGeometry x="873" y="767" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--42" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.758;exitY=0.000;exitDx=0;exitDy=0;entryX=0.334;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--7" target="diUI_rL3HwAar2bAVaX--14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--43" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--42">
+          <mxGeometry x="1579" y="456" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--44" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--42">
+          <mxGeometry x="1579" y="811" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--45" value="specie" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--42">
+          <mxGeometry x="1590" y="456" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--46" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.975;exitY=0.000;exitDx=0;exitDy=0;entryX=0.171;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--7" target="diUI_rL3HwAar2bAVaX--22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--47" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--46">
+          <mxGeometry x="1642" y="836" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--48" value="*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--46">
+          <mxGeometry x="1638" y="822" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--49" value="travellogs" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--46">
+          <mxGeometry x="1657" y="812" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--50" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.000;exitY=0.500;exitDx=0;exitDy=0;entryX=1.000;entryY=0.500;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--10" target="diUI_rL3HwAar2bAVaX--8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1268" y="1848" />
+              <mxPoint x="1268" y="1709" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--51" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--50">
+          <mxGeometry x="1252" y="1705" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--52" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--50">
+          <mxGeometry x="1272" y="1824" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--53" value="observationRepository" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--50">
+          <mxGeometry x="1193" y="1636" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--54" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.287;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.001;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--10" target="diUI_rL3HwAar2bAVaX--9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--55" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--54">
+          <mxGeometry x="1427" y="1599" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--56" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--54">
+          <mxGeometry x="1427" y="1728" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--57" value="observationRepositoryPaginate" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--54">
+          <mxGeometry x="1438" y="1599" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--58" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.001;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--10" target="diUI_rL3HwAar2bAVaX--15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1534" y="1678" />
+              <mxPoint x="1738" y="1678" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--59" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--58">
+          <mxGeometry x="1727" y="1654" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--60" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--58">
+          <mxGeometry x="1569" y="1658" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--61" value="specieRepository" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--58">
+          <mxGeometry x="1738" y="1654" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--62" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.652;exitY=0.000;exitDx=0;exitDy=0;entryX=1.000;entryY=0.500;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--11" target="diUI_rL3HwAar2bAVaX--1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1456" y="30" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--63" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--62">
+          <mxGeometry x="1430" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--64" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--62">
+          <mxGeometry x="1450" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--65" value="category" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--62">
+          <mxGeometry x="1415" y="-5" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--66" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=1.000;exitY=0.605;exitDx=0;exitDy=0;entryX=0.545;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--12" target="diUI_rL3HwAar2bAVaX--17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2363" y="1774" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--67" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--66">
+          <mxGeometry x="2352" y="1648" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--68" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--66">
+          <mxGeometry x="2352" y="1747" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--69" value="specieService" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--66">
+          <mxGeometry x="2363" y="1648" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--70" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=1.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.001;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--17" target="diUI_rL3HwAar2bAVaX--15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2348" y="1678" />
+              <mxPoint x="1738" y="1678" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--71" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--70">
+          <mxGeometry x="1727" y="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--72" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--70">
+          <mxGeometry x="2348" y="1640" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--73" value="specieRepository" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--70">
+          <mxGeometry x="1738" y="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--74" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.000;exitY=0.121;exitDx=0;exitDy=0;entryX=1.000;entryY=0.500;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--17" target="diUI_rL3HwAar2bAVaX--16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--75" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--74">
+          <mxGeometry x="2035" y="1523" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--76" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--74">
+          <mxGeometry x="2119" y="1528" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--77" value="specieRepositoryPaginate" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--74">
+          <mxGeometry x="1957" y="1443" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--78" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.382;exitY=1.000;exitDx=0;exitDy=0;entryX=0.975;entryY=0.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--19" target="diUI_rL3HwAar2bAVaX--4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--79" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--78">
+          <mxGeometry x="1256" y="814" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--80" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--78">
+          <mxGeometry x="1256" y="484" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--81" value="observation" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--78">
+          <mxGeometry x="1250" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--82" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.000;exitY=0.500;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--19" target="diUI_rL3HwAar2bAVaX--18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="992" y="299" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--83" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--82">
+          <mxGeometry x="981" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--84" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--82">
+          <mxGeometry x="981" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--85" value="mode" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--82">
+          <mxGeometry x="992" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--86" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.103;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--20" target="diUI_rL3HwAar2bAVaX--25">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--87" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--86">
+          <mxGeometry x="71" y="1675" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--88" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--86">
+          <mxGeometry x="71" y="1739" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--89" value="travellogsService" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--86">
+          <mxGeometry x="82" y="1675" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--90" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=1.000;exitY=0.500;exitDx=0;exitDy=0;entryX=1.000;entryY=0.500;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--25" target="diUI_rL3HwAar2bAVaX--8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1268" y="1615" />
+              <mxPoint x="1268" y="1709" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--91" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--90">
+          <mxGeometry x="1248" y="1705" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--92" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--90">
+          <mxGeometry x="1258" y="1709" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--93" value="observationRepository" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--90">
+          <mxGeometry x="1197" y="1636" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--94" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.832;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--25" target="diUI_rL3HwAar2bAVaX--23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--95" value="«create»" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--94">
+          <mxGeometry x="208" y="1484" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--96" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=1.000;exitY=0.068;exitDx=0;exitDy=0;entryX=0.000;entryY=0.719;entryDx=0;entryDy=0;" edge="1" parent="1" source="diUI_rL3HwAar2bAVaX--25" target="diUI_rL3HwAar2bAVaX--24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--97" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--96">
+          <mxGeometry x="374" y="1551" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--98" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--96">
+          <mxGeometry x="363" y="1557" as="geometry" />
+        </mxCell>
+        <mxCell id="diUI_rL3HwAar2bAVaX--99" value="travellogRepository" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="diUI_rL3HwAar2bAVaX--96">
+          <mxGeometry x="336" y="1611" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
