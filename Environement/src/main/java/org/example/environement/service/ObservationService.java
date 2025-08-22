@@ -45,7 +45,7 @@ public class ObservationService {
     }
 
     public List<ObservationDtoResponse> getBySpecie (long specieId){
-        return convertList(observationRepository.findObservationBySpecieId(specieId));
+        return convertList(observationRepository.findBySpecie_Id(specieId));
     }
 
     private List<ObservationDtoResponse> convertList (List<Observation> observations){

@@ -16,4 +16,5 @@ public class SpecieDtoResponse {
     private String commonName;
     private String scientificName;
     private String category;
+
 }

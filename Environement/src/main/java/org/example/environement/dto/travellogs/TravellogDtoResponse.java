@@ -15,4 +15,5 @@ public class TravellogDtoResponse {
     private double distanceKm;
     private String mode;
     private double estimatedCo2Kg;
+    
 }
