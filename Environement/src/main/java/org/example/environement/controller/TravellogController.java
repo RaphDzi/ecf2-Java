@@ -11,6 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.example.environement.repository.ObservationRepository;
 import org.example.environement.entity.Observation;
+import org.example.environement.repository.TravellogRepository.TravellogStatsProjection;
+import org.example.environement.repository.TravellogRepository.TravellogByModeProjection;
 
 import java.util.DoubleSummaryStatistics;
 import java.util.List;
@@ -66,26 +68,24 @@ public class TravellogController {
 
     @GetMapping("/stats/{idObservation}")
     public ResponseEntity<TravellogStatsResponse> statsByObservation(@PathVariable long idObservation) {
-        List<TravellogDtoResponse> items = travellogRepository.findTravellogByObservation_Id(idObservation)
-                .stream()
-                .map(Travellog::entityToDto)
-                .toList();
+        // Lecture directe en BDD via agrégations
+        TravellogStatsProjection totals = travellogRepository.aggregateStatsByObservation(idObservation);
+        List<TravellogByModeProjection> perMode = travellogRepository.aggregateEmissionsByMode(idObservation);
 
-        double totalDistance = items.stream().mapToDouble(TravellogDtoResponse::getDistanceKm).sum();
-        double totalEmissions = items.stream().mapToDouble(TravellogDtoResponse::getEstimatedCo2Kg).sum();
+        Map<String, Double> byMode = perMode.stream()
+                .collect(Collectors.toMap(TravellogByModeProjection::getMode, TravellogByModeProjection::getEmissionsKg));
 
-        Map<String, Double> byMode = items.stream()
-                .collect(Collectors.groupingBy(
-                        TravellogDtoResponse::getMode,
-                        Collectors.summingDouble(TravellogDtoResponse::getEstimatedCo2Kg)
-                ));
-
-        return ResponseEntity.ok(new TravellogStatsResponse(totalDistance, totalEmissions, byMode));
+        return ResponseEntity.ok(new TravellogStatsResponse(
+                totals == null ? 0.0 : totals.getTotalDistanceKm(),
+                totals == null ? 0.0 : totals.getTotalEmissionsKg(),
+                byMode
+        ));
     }
 
-    // Remplace l'ancien record par celui-ci pour matcher le format attendu
+    public record TravellogListResponse(List<TravellogDtoResponse> items, double totalCo2Kg) {}
+
+    // Réponse conforme à ton besoin
     public record TravellogStatsResponse(double totalDistanceKm,
                                          double totalEmissionsKg,
                                          Map<String, Double> byMode) {}
-    public record TravellogListResponse(List<TravellogDtoResponse> items, double totalCo2Kg) {}
 }

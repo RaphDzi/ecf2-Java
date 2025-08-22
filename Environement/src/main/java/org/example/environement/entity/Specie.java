@@ -9,6 +9,7 @@ import org.example.environement.dto.specie.SpecieDtoResponse;
 import org.example.environement.entity.enums.Category;
 
 @Entity
+@Table(name = "specie")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -17,11 +18,12 @@ public class Specie {
     @Id
     @GeneratedValue
     private long id;
-    @Column(nullable = false)
+    @Column(name = "common_name", nullable = false)
     private String commonName;
-    @Column(nullable = false)
+    @Column(name = "scientific_name", nullable = false)
     private String scientificName;
-    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "category", nullable = false)
     private Category category;
 
     public SpecieDtoResponse entityToDto (){
